@@ -8,6 +8,8 @@
   {{> hello}}
   
   {{> sentInfo}}
+  
+  {{> intitializeBookInfo}}
 </body>
 
 <template name="hello">
@@ -21,17 +23,30 @@
 </template>
 
 <template name='sentInfo'>
-  <h2>sent</h2>
-  <p>to buy a ticket you need the address associated with the event and to choose the segment your ticket will be, after that you will get an access key</p>
+  <h2>Book circulation</h2>
+  <p>To borrow a book from library, return a book or borrow a book to other users</p>
   <input type="text" class="from"/>
-  <label>from address</label>
+  <label>Library or user who would lend a book</label>
   <br>
   <input type="text" class="to"/>
-  <label>to address</label>
+  <label>Library(if get a returm book) or user (if get a book from a libary or other user)</label>
   <br>
   <input type="text" class="amount"/>
   <label>amount</label>
   <br>
-  <button>Sent</button>
+  <button>Take action</button>
   <p><b>{{ sentInfo }}</b></p>
+</template>
+
+<template name='intitializeBookInfo'>
+  <h2>intitializeBookInfo</h2>
+  <p>to buy a ticket you need the address associated with the event and to choose the segment your ticket will be, after that you will get an access key</p>
+  <input type="text" class="libaryId"/>
+  <label>Libary Id</label>
+  <br>
+  <input type="text" class="bookId"/>
+  <label>Book Id</label>
+  <br>
+  <button>Initialize book</button>
+  <p><b>{{ intitializeBookInfo }}</b></p>
 </template>

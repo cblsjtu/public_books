@@ -28,9 +28,25 @@ if (Meteor.isClient) {
     },  
 });
 
+  Template.intitializeBook.events({
+  'click button': function (e, template) {
+        var libraryId = template.find('.libraryId').value;
+        var bookId = template.find('.bookId').value;
+        Books.intitializeBook(libraryId, bookId, {from: web3.eth.accounts[0], gas: 500000})
+		template.find('.libraryId').value = '';
+        template.find('.bookId').value = '';
+    },  
+});
+
   Template.sent.helpers({
   sentInfo: function() {
     return Session.get('sentInfo');
+  }
+});
+
+  Template.intitializeBook.helpers({
+  intitializeBookInfo: function() {
+    return Session.get('intitializeBookInfo');
   }
 });
 }

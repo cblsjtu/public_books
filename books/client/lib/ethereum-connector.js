@@ -72,3 +72,14 @@ Books.sent().watch({}, '', function(error, result) {
             " to " + result.args.to + ".")
     }
 });
+
+Books.initializeBook().watch({}, '', function(error, result) {
+    if (!error) {
+        console.log("Book initialize: library ID" + result.args.libraryId +
+            " initializes the book " + result.args.bookId + ".");
+        alert("Book initialize: library ID" + result.args.libraryId +
+            " initializes the book " + result.args.bookId + ".");
+        Session.set("initializeBookInfo", "Book initialize: library ID" + result.args.libraryId +
+            " initializes the book " + result.args.bookId + ".")
+    }
+});
