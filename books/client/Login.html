@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>系统登录</title>
+    <link rel="stylesheet" type="text/css" href="login.css" media="all" />
+    <link href="css/facebox.css" rel="stylesheet" type="text/css" />
+    <!--link href="css/styles.css" rel="stylesheet" type="text/css" /-->
+    <style type="text/css">
+        .dd-selected-image, .dd-option-image
+        {
+            height: 16px;
+            width: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-body">
+        <div id="login_wrapper">
+            <div id="login_main">
+                <div class="logo" id="logo"><h1>DD<span>Books</span></h1></div>
+                <div class="login-form">
+                    <form id="login_form"  action="index.html">
+                    <dl>
+                        <dd>
+                            <span class="tip-text">请输入帐号</span>
+                            <input  type="text" id="textName" class="login-inp" maxlength="99" runat="server"/>
+                        </dd>
+                        <dd>
+                            <span class="tip-text">请输入密码</span><input type="password" id="textMemberPWD" maxlength="99" class="login-inp pass-inp"  />
+                        </dd>
+                        <dd class="ddbtn">
+                            <input type="submit" class="btn-login" value="登录"/>
+                        </dd>
+                    </dl>
+                    </form>
+                <div style="margin:auto; left:45px;top:80px;position:relative; color:#059aac;">Copyright (C) 2015-2016</div> 
+                </div>
+            </div> 
+        </div>
+    </div>
+   
+</body>
+</html>

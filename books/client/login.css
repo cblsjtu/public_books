@@ -1,0 +1,52 @@
+﻿@charset "utf-8";
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, a, blockquote, table, th, td, img { margin:0; padding:0; }
+ol, ul, li { list-style:none; }
+img { border:none; }
+body { font:12px/20px Verdana, Arial; }
+a:link, a:visited { color:#fff; text-decoration:none; }
+a:focus { outline:none; }
+a:hover { color: #f60; }
+input[type="button"], input[type="submit"], input[type="reset"] { cursor:pointer; }
+html, body { height:100%; }
+
+body { background:url(images/login_bg5-3.jpg) no-repeat center; }
+.login-body { }
+/*#login_wrapper { height:529px; padding-top:110px; background:#4a4a4a url(images/login-bg1.jpg) no-repeat center top; }*/
+#login_main { width:713px; height:511px; margin:10px auto; background:url(images/login_form3.png) no-repeat center; _width:597px; _height:521px; _margin:-260px 0 0 -298px; _background:url(images/login-main.png) no-repeat -56px -56px; }
+#logo h1 {
+	font-size: 36px;
+	letter-spacing: -3px;
+	font-family: Tahoma, Geneva, sans-serif;
+	color: #F1F1F1;
+	margin: 0px;
+	font-weight: bold;
+}
+.logo { height:96px; padding:160px 0 0 0; _padding:0 0 0 0; text-align:center; overflow:hidden; }
+.login-form { font-family:Arial; padding:5px 70px 0 230px; _padding:35px 0 0 99px;top:230px;position:absolute;}
+.login-form dd { height:44px; margin-bottom:10px; position:relative; }
+
+.login-form dd .tip-text { position:absolute; left:60px; top:11px; color:#657887; }
+.login-form dd .tooltip { position:absolute; left:285px; top:10px; color:#ffc000; }
+
+.login-form dd.ddlang { height:22px; color:#fff; padding:0 0 0 40px; overflow:hidden; }
+.login-form dd.ddlang a { margin:0 6px; }
+.login-form dd.ddlang a.active { color:#FFCD2A; }
+.login-form dd.ddlang a:hover { color:#FFCD2A; text-decoration:underline; }
+
+
+.login-form .login-inp { width:210px; height:44px; line-height:44px; padding:0 15px 0 55px; color:#657887; border:none; background:url(images/login-inp.png) no-repeat; }
+.login-form .pass-inp { background-position:0 -53px; }
+.login-form .code-inp { width:142px; float:left; background-position:0 -106px; margin-right:12px; }
+
+.login-form .img-code { position:absolute; top:8px; left:212px; }
+
+.login-form dd.ddbtn { padding:9px 0 0 43px; }
+.login-form .btn-login { float:left; width:102px; height:45px; margin-right:6px; color:#fff; text-align:center; font-size:16px; font-weight:bold; font-family:Verdana; vertical-align:middle; cursor:pointer; border:none; background:url(images/login-btn.png) no-repeat; }
+.login-form .btn-reset { margin:0; background-position:-108px 0; }
+
+.login-form .links { display:inline-block; padding:5px 0 0 43px; }
+.login-form .links a { color:#fff; margin:0 3px; text-decoration:underline; }
+.login-form .links a:hover { color:#F7AA0C; }
+
+

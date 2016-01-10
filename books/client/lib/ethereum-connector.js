@@ -19,8 +19,8 @@ var abi = [
         "type": "address"
       },
       {
-        "name": "amount",
-        "type": "uint"
+        "name": "bookid",
+        "type": "bytes32"
       }
     ],
     "name": "sent",
@@ -30,26 +30,44 @@ var abi = [
         "type": "uint256"
       }
     ],
-    "type": "function"
+    "type": "event"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "libraryId",
+        "type": "address"
+      },
+      {
+        "name": "bookId",
+        "type": "bytes32"
+      }
+    ],
+    "name": "initializeBook",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "type": "event"
   }
 ]
     
 Books = web3.eth.contract(abi);
 
-Books = Books.at('0xdf315f7485c3a86eb692487588735f224482abe3');
+// Books = Books.at('0xdf315f7485c3a86eb692487588735f224482abe3');
 
 Books.sent().watch({}, '', function(error, result) {
     if (!error) {
-        console.log("Books transfer: " + result.args.amount +
+        console.log("Books transfer: " + result.args.bookid +
             " Books were sent from " + result.args.from +
             " to " + result.args.to + ".");
-        console.log("Balances now:\n" +
-            "Sender: " + Books.balances.call(result.args.from) +
-            "Receiver: " + Books.balances.call(result.args.to));
-        alert("Books transfer: " + result.args.amount +
+        alert("Books transfer: " + result.args.bookid +
             " Books were sent from " + result.args.from +
             " to " + result.args.to + ".");
-        Session.set("sentInfo", "Books transfer: " + result.args.amount +
+        Session.set("sentInfo", "Books transfer: " + result.args.bookid +
             " Books were sent from " + result.args.from +
             " to " + result.args.to + ".")
     }
