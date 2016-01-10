@@ -1,0 +1,37 @@
+<head>
+  <title>books</title>
+</head>
+
+<body>
+  <h1>Welcome to Meteor!</h1>
+
+  {{> hello}}
+  
+  {{> sentInfo}}
+</body>
+
+<template name="hello">
+  <button>Click Me</button>
+  <p>You've pressed the button {{counter}} times.</p>
+</template>
+
+<template name="hello">
+  <button>Click Me</button>
+  <p>You've pressed the button {{counter}} times.</p>
+</template>
+
+<template name='sentInfo'>
+  <h2>sent</h2>
+  <p>to buy a ticket you need the address associated with the event and to choose the segment your ticket will be, after that you will get an access key</p>
+  <input type="text" class="from"/>
+  <label>from address</label>
+  <br>
+  <input type="text" class="to"/>
+  <label>to address</label>
+  <br>
+  <input type="text" class="amount"/>
+  <label>amount</label>
+  <br>
+  <button>Sent</button>
+  <p><b>{{ sentInfo }}</b></p>
+</template>

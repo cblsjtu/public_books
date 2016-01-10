@@ -1,0 +1,88 @@
+<head>
+  <title>tickeths</title>
+</head>
+
+<body>
+  <h1>tickΞths</h1>
+  {{> createShow}}
+  
+  {{> createSegment}}
+
+  {{> buyTicket }}
+  
+  {{> validateTicket }}
+  
+  {{> sent }}
+</body>
+
+<template name="hello">
+  <button>Click Me</button>
+  <p>You've pressed the button {{counter}} times.</p>
+</template>
+
+<template name="createShow">
+  <h2>Create a show</h2>
+  <p>an event will be created and associated to the address that created it, assign a name for your event</p>
+  <input type="text" class="showName"/>
+  <label>name</label>
+  <br>
+  <button>Create</button>
+  <p><b>{{ createShowInfo }}</b></p>
+</template>
+
+<template name="createSegment">
+  <h2>Create a segment</h2>
+  <p>a segment is a division in the tickets type, for example you can create VIP tickets and General tickets, or anything that suits your event</p>
+  <input type="text" class="segment"/>
+  <label>name</label>
+  <br>
+  <input type="text" class="amount"/>
+  <label>amount</label>
+  <br>
+  <input type="text" class="price"/>
+  <label>price</label>
+  <br>
+  <button>Create</button>
+  <p><b>{{ createSegmentInfo }}</b></p>
+</template>
+
+<template name='buyTicket'>
+  <h2>Buy tickets</h2>
+  <p>to buy a ticket you need the address associated with the event and to choose the segment your ticket will be, after that you will get an access key</p>
+  <input type="text" class="address"/>
+  <label>event address</label>
+  <br>
+  <input type="text" class="sid"/>
+  <label>segment ID</label>
+  <br>
+  <button>Buy</button>
+  <p><b>{{ buyTicketInfo }}</b></p>
+</template>
+
+<template name='validateTicket'>
+  <h2>Validate ticket</h2>
+  <p>to redeem access on the event the cryptographic challenge has to be validated with your access key, this can be conviniently read from a qr code</p>
+  <input type="text" class="serial"/>
+  <label>serial number</label>
+  <br>
+  <input type="text" class="key"/>
+  <label>access key</label>
+  <br>
+  <button>Validate</button>
+</template>
+
+<template name='sent'>
+  <h2>sent</h2>
+  <p>to buy a ticket you need the address associated with the event and to choose the segment your ticket will be, after that you will get an access key</p>
+  <input type="text" class="from"/>
+  <label>from address</label>
+  <br>
+  <input type="text" class="to"/>
+  <label>to address</label>
+  <br>
+  <input type="text" class="amount"/>
+  <label>amount</label>
+  <br>
+  <button>Sent</button>
+  <p><b>{{ sentInfo }}</b></p>
+</template>
